@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: #212033;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#ff1194, #20a3ef);
+    clip-path: circle(30% at right 70%);
+    position: fixed;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#ff1194, #efde20, rgb(164, 255, 8));
+    clip-path: circle(20% at 10% 10%);
+    position: fixed;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+
+.container .card {
+    position: relative;
+    height: 450px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 30px 20px rgba(0, 0, 0, 0.4);
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* backdrop-filter: blur(3px); */
+    border-top: 1px solid #bdbaba;
+    border-left: 1px solid #bdbaba;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+.container .card .text {
+    text-align: center;
+    padding: 20px;
+    transform: translateZ(30px);
+    text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.container .card .text h2 {
+    font-size: 6em;
+    /* margin: 40px; */
+    color: rgba(255, 255, 255, 0.388);
+}
+
+.container .card .text h3 {
+    font-size: 2em;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.container .card .text p {
+    color: #ffffff;
+    line-height: 20px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.container .card .text a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 30px;
+    background: #20a3ef;
+    border-radius: 15px;
+    margin-top: 20px;
+}
